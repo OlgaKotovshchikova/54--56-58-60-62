@@ -1,0 +1,16 @@
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\bin\Debug\net5.0\54-56-58-60-62.exe
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\bin\Debug\net5.0\54-56-58-60-62.deps.json
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\bin\Debug\net5.0\54-56-58-60-62.runtimeconfig.json
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\bin\Debug\net5.0\54-56-58-60-62.runtimeconfig.dev.json
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\bin\Debug\net5.0\54-56-58-60-62.dll
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\bin\Debug\net5.0\ref\54-56-58-60-62.dll
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\bin\Debug\net5.0\54-56-58-60-62.pdb
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.csproj.AssemblyReference.cache
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.AssemblyInfoInputs.cache
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.AssemblyInfo.cs
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.csproj.CoreCompileInputs.cache
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.dll
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\ref\54-56-58-60-62.dll
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.pdb
+C:\Users\Никита\Desktop\54-56-58-60-62\54-56-58-60-62\obj\Debug\net5.0\54-56-58-60-62.genruntimeconfig.cache
