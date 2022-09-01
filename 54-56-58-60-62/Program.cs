@@ -17,10 +17,10 @@ namespace _54_56_58_60_62
                 case 56:
                     TaskFiftysix();
                     break;
-                /*case 58:
+                case 58:
                     TaskFiftyeight();
                     break;
-                case 60:
+                /*case 60:
                     TaskSixty();
                     break;
                 case 62:
@@ -130,6 +130,46 @@ namespace _54_56_58_60_62
             int resultString = Array.IndexOf(array, array.Min());
             Console.WriteLine($"{resultString+1} строка");
         }
-        #endregion 
+        #endregion
+
+
+        #region Задача 58
+       /* Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+        Например, даны 2 матрицы:
+        2 4 | 3 4
+        3 2 | 3 3
+        Результирующая матрица будет:
+        18 20
+        15 18*/
+
+        static void TaskFiftyeight()
+        {
+            int[,] matrixOne = FillArray(2, 2);
+            PrintArray(matrixOne);
+            int[,] matrixTwo = FillArray(2, 2);
+            PrintArray(matrixTwo);
+            if (matrixOne.GetLength(1) != matrixTwo.GetLength(0))
+            {
+                Console.WriteLine("Невозможно найти произведение матриц такой размерности");
+            }
+            else
+            {
+                int[,] matrixResult = new int[matrixOne.GetLength(0), matrixTwo.GetLength(1)];
+                for (int i = 0; i < matrixOne.GetLength(0); i++)
+                {
+                    for (int j = 0; j < matrixTwo.GetLength(1); j++)
+                    {
+                        for (int i = 0; i < length; i++)
+                        {
+
+                        }
+                        matrixResult[i, j] = matrixOne[i, j] * matrixTwo[i, j] 
+                    }
+                }
+
+            }
+        }
+
+        #endregion
     }
 }
