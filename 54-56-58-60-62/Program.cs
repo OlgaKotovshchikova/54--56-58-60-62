@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _54_56_58_60_62
 {
@@ -13,10 +14,10 @@ namespace _54_56_58_60_62
                 case 54:
                     TaskFiftyfour();
                     break;
-                /*case 56:
+                case 56:
                     TaskFiftysix();
                     break;
-                case 58:
+                /*case 58:
                     TaskFiftyeight();
                     break;
                 case 60:
@@ -30,6 +31,35 @@ namespace _54_56_58_60_62
                     break;
             }
         }
+
+        static int[,] FillArray(int rows, int columns)
+        {
+            int[,] matrix = new int[rows, columns];
+            Random rand = new Random();
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = rand.Next(1, 10);
+                }
+            }
+            return matrix;
+        }
+
+        static void PrintArray(int[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write($"{matrix[i, j]} ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+        
+
         #region Задача 54
         /*Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
         Например, задан массив:
@@ -43,33 +73,6 @@ namespace _54_56_58_60_62
 
         static void TaskFiftyfour()
         {
-            int[,] FillArray(int rows, int columns)
-            {
-                int[,] matrix = new int[rows, columns];
-                Random rand = new Random();
-                for (int i = 0; i < matrix.GetLength(0); i++)
-                {
-                    for (int j = 0; j < matrix.GetLength(1); j++)
-                    {
-                        matrix[i, j] = rand.Next(1, 10);
-                    }
-                }
-                return matrix;
-            }
-
-            void PrintArray(int[,] matrix)
-            {
-                for (int i = 0; i < matrix.GetLength(0); i++)
-                {
-                    for (int j = 0; j < matrix.GetLength(1); j++)
-                    {
-                        Console.Write($"{matrix[i, j]} ");
-                    }
-                    Console.WriteLine();
-                }
-                Console.WriteLine();
-            }
-
             void SortMatrix(int[,] matrix)
             {
                 for (int i = 0; i < matrix.GetLength(0); i++)
@@ -95,5 +98,38 @@ namespace _54_56_58_60_62
             PrintArray(matrix);
         }
         #endregion
+
+
+        #region Задача 56
+        /*Задайте прямоугольный двумерный массив.
+         * Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+        Например, задан массив:
+        1 4 7 2
+        5 9 2 3
+        8 4 2 4
+        5 2 6 7
+        Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка*/
+
+        static void TaskFiftysix()
+        {
+            int[,] matrix = FillArray(4, 4);
+            PrintArray(matrix);
+            int[] array = new int[matrix.GetLength(0)];
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    array[i] += matrix[i, j];
+                }
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine($"Сумма элементов {i+1}-ой строки: {array[i]}");
+            }
+            Console.WriteLine();
+            int resultString = Array.IndexOf(array, array.Min());
+            Console.WriteLine($"{resultString+1} строка");
+        }
+        #endregion 
     }
 }
