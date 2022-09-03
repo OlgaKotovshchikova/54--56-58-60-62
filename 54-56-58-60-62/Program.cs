@@ -159,17 +159,15 @@ namespace _54_56_58_60_62
                 {
                     for (int j = 0; j < matrixTwo.GetLength(1); j++)
                     {
-                        for (int i = 0; i < length; i++)
+                        for (int k = 0; k < matrixOne.GetLength(0); k++)
                         {
-
+                            matrixResult[i, j] += matrixOne[i, k] * matrixTwo[k, j];
                         }
-                        matrixResult[i, j] = matrixOne[i, j] * matrixTwo[i, j] 
                     }
                 }
-
+                PrintArray(matrixResult);
             }
         }
-
         #endregion
     }
 }
