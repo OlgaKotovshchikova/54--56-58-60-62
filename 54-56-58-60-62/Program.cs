@@ -23,9 +23,9 @@ namespace _54_56_58_60_62
                 case 60:
                     TaskSixty();
                     break;
-               /* case 62:
+                case 62:
                     TaskSixtytwo();
-                    break;*/
+                    break;
                 default:
                     Console.WriteLine("Такой задачи не существует");
                     break;
@@ -231,6 +231,41 @@ namespace _54_56_58_60_62
             return false;
         }
 
+        #endregion
+
+        #region Задача 60
+        /*Напишите программу, которая заполнит спирально массив 4 на 4.
+        Например, на выходе получается вот такой массив:
+        01 02 03 04
+        12 13 14 05
+        11 16 15 06
+        10 09 08 07*/
+
+        static void TaskSixtytwo()
+        {
+            int[,] array = new int[4, 4];
+            int arrayLenght = array.GetLength(0);
+            for (int currentChar = 1, circle = 0; circle < arrayLenght / 2; circle++)
+            {
+                for (int j = circle; j < arrayLenght - circle; j++, currentChar++)
+                    array[circle, j] = currentChar;
+                for (int i = circle + 1; i < arrayLenght - circle - 1; i++, currentChar++)
+                    array[i, arrayLenght - circle - 1] = currentChar;
+                for (int j = arrayLenght - circle - 1; j > circle; j--, currentChar++)
+                    array[arrayLenght - circle - 1, j] = currentChar;
+                for (int i = arrayLenght - circle - 1; i > circle; i--, currentChar++)
+                    array[i, circle] = currentChar;
+            }
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] < 10) Console.Write($"0{array[i, j]} ");
+                    else Console.Write($"{array[i, j]} ");
+                }
+                Console.WriteLine();
+            }
+        }
         #endregion
     }
 }
